@@ -1,0 +1,91 @@
+.emergency-page {
+  min-height: 100vh;
+  background: #0d0d0d;
+  color: #fff;
+  font-family: 'Sora', sans-serif;
+}
+.emergency-page.loading, .emergency-page.error-state {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 16px; text-align: center; padding: 40px;
+}
+.error-icon { font-size: 60px; }
+
+.emergency-header {
+  background: #c0392b;
+  padding: 20px 24px;
+}
+.emergency-banner {
+  display: flex; align-items: center;
+  gap: 16px; max-width: 700px; margin: 0 auto;
+}
+.emergency-symbol { font-size: 32px; }
+.emergency-banner h1 { font-size: 18px; font-weight: 800; letter-spacing: 1px; line-height: 1.2; }
+.emergency-banner p { font-size: 13px; opacity: 0.85; margin-top: 3px; }
+
+.emergency-content { max-width: 700px; margin: 0 auto; padding: 24px; }
+
+.patient-name-card {
+  display: flex; flex-direction: column;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.name-label { font-size: 11px; letter-spacing: 2px; color: #888; text-transform: uppercase; font-family: 'JetBrains Mono', monospace; }
+.patient-name { font-size: 28px; font-weight: 700; margin-top: 6px; }
+
+.emergency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 20px; }
+
+.emergency-block {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 18px 20px;
+  border: 1px solid #2a2a2a;
+}
+.block-label { font-size: 11px; letter-spacing: 2px; color: #888; font-family: 'JetBrains Mono', monospace; margin-bottom: 12px; text-transform: uppercase; }
+
+.blood-type { border-color: #c0392b; background: rgba(192, 57, 43, 0.1); }
+.blood-type-value { font-size: 52px; font-weight: 800; color: #e74c3c; font-family: 'JetBrains Mono', monospace; line-height: 1; }
+
+.allergies { border-color: #e67e22; background: rgba(230, 126, 34, 0.08); }
+.conditions { border-color: #2980b9; background: rgba(41, 128, 185, 0.08); }
+.medications { border-color: #27ae60; background: rgba(39, 174, 96, 0.08); }
+
+.emergency-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.emergency-tag {
+  padding: 5px 12px; border-radius: 100px;
+  font-size: 13px; font-weight: 500;
+}
+.allergy-tag { background: rgba(231, 76, 60, 0.2); border: 1px solid rgba(231, 76, 60, 0.4); color: #ff6b6b; }
+.condition-tag { background: rgba(52, 152, 219, 0.2); border: 1px solid rgba(52, 152, 219, 0.4); color: #7fb3d3; }
+.med-tag { background: rgba(39, 174, 96, 0.15); border: 1px solid rgba(39, 174, 96, 0.3); color: #6fcf97; }
+
+.no-data { color: #555; font-size: 14px; font-style: italic; }
+
+.contact-block {
+  background: #1a2a1a;
+  border: 2px solid #27ae60;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+.contact-header { font-size: 11px; letter-spacing: 2px; color: #27ae60; font-family: 'JetBrains Mono', monospace; margin-bottom: 12px; text-transform: uppercase; }
+.contact-info { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.contact-name { font-size: 20px; font-weight: 700; }
+.contact-rel { color: #888; font-size: 15px; }
+.contact-phone {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 20px;
+  background: #27ae60; color: white;
+  border-radius: 8px; text-decoration: none;
+  font-size: 18px; font-weight: 700;
+}
+
+.emergency-footer { text-align: center; color: #444; font-size: 12px; padding: 16px 0; border-top: 1px solid #222; }
+
+@media (max-width: 500px) {
+  .emergency-grid { grid-template-columns: 1fr; }
+  .blood-type-value { font-size: 40px; }
+}
